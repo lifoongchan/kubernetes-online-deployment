@@ -1,5 +1,5 @@
 ### This is only a personal study note, written in my second language, and it might consist of wrong concepts/errors ###
-Kubernetes service such as Load Balancer (LB) is required to expose application to internet. 
+A Kubernetes service such as Load Balancer (LB) is required to expose application to internet when working with Kubernetes. 
 Depending on the requirement of the app or service, there are alternatives for online deployment.
 LB is suitable for apps and services that need high availability, scalability, 
 traffic management, security or redundancy 
