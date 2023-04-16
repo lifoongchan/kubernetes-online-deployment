@@ -1,7 +1,7 @@
 ### This is only personal, study note and it might consists of wrong concepts/errors ###
-Kubernetes service is required to expose application to internet. 
+Kubernetes service such as Load Balancer (LB) is required to expose application to internet. 
 Depending on the requirement of the app or service, there are alternatives for online deployment.
-Load Balancer (LB) is suitable for apps and services that need high availability, scalability, 
+LB is suitable for apps and services that need high availability, scalability, 
 traffic management, security or redundancy 
 (* redundancy - LB make sure requests are directed to healthy instance by
 detecting and redirecting traffic away from instances with issues.)
@@ -10,7 +10,7 @@ detecting and redirecting traffic away from instances with issues.)
 To create the service that is available over internet:
 1) Start a tunnel in a terminal by running "minikube tunnel" and keep it open
 
-2) key in "kubectl apply -f (name of service file).yaml" in a separate tab
+2) key in "kubectl apply -f (name of service file).yaml" in a separate tab/terminal
 to apply service.yaml file and create a service
 
 3) "kubectl get services -n (name of namespace)" -> this command displays informations of services.
