@@ -26,7 +26,7 @@ There are 2 types of IP address being shown:
 
 More info:
  
-In this exampple, 
+In this example, 
 External IP = 127.0.0.1 -> this IP is the local host of any local computer
 -because that minikube works exclusively with local computer, 
 IP addresses we get are not available across the internet 
