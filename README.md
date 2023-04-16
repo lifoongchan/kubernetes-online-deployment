@@ -10,12 +10,12 @@ detecting and redirecting traffic away from instances with issues.)
 To create the service that is available over internet:
 1) Start a tunnel in a terminal by running "minikube tunnel" and keep it open
 
-2) key in "kubectl apply -f <name of service file>.yaml" in a separate tab
+2) key in "kubectl apply -f (name of service file).yaml" in a separate tab
 to apply service.yaml file and create a service
 
-3) "kubectl get services -n <name of namespace>" -> this command displays informations of services
+3) "kubectl get services -n (name of namespace)" -> this command displays informations of services.
 There are 2 types of IP address being shown: 
-   i) IP inside of the cluster 
+   i) IP inside of the cluster, 
    ii) External IP
 
 4) paste External IP onto browser and it will call out JSON Object from the pod
