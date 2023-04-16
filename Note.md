@@ -1,4 +1,4 @@
-### This is only personal, study note and it might consist of wrong concepts/errors ###
+### This is only a personal study note, written in my second language, and it might consist of wrong concepts/errors ###
 Kubernetes service such as Load Balancer (LB) is required to expose application to internet. 
 Depending on the requirement of the app or service, there are alternatives for online deployment.
 LB is suitable for apps and services that need high availability, scalability, 
@@ -28,7 +28,7 @@ More info:
  
 In this exampple, 
 External IP = 127.0.0.1 -> this IP is the local host of any local computer
--because that minikube works only with local computer, 
+-because that minikube works exclusively with local computer, 
 IP addresses we get are not available across the internet 
 -> so we need to activate tunnel to show it online 
 
