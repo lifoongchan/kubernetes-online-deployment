@@ -8,7 +8,7 @@ detecting and redirecting traffic away from instances with issues.)
 
 
 To create the service that is available over internet:
-1) Start a tunnel in a terminal by running "minikube tunnel" and keep it open
+1) Start a tunnel in a terminal by running "minikube tunnel" and keep the same terminal open
 
 2) key in "kubectl apply -f (name of service file).yaml" in a separate tab/terminal
 to apply service.yaml file and create a service
