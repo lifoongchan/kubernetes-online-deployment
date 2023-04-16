@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-service
+  namespace: development
+spec:
+  selector:
+    app: pod-info # send traffic to any pods with the label
+    # make sure pods have this label or the traffic won't reach to them
+  ports:
+    - port: 80 # default pot
+      targetPort: 3000 # directing traffic to port 3000 in the container
+  type: LoadBalancer # one of three types of kubernetes service 
+  #(node port and cluster IP are the other two)

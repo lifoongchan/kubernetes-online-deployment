@@ -1,0 +1,36 @@
+--- 
+apiVersion: apps/v1 # api group being sent a request to
+kind: Deployment # type of kubertes object we want to create
+metadata:
+  name: pod-info-deployment #pod name that specified to be in deployment namespace
+  namespace: development
+  labels:
+    app: pod-info
+spec: # make highly-available
+  replicas: 3 # how many replicas of containers we want to run
+  selector:
+    matchLabels:
+      app: pod-info
+  template:
+    metadata:
+      labels:
+        app: pod-info
+    spec:
+      containers: # specific details of containers we want to run 
+      - name: pod-info-container
+        image: kimschles/pod-info-app:latest #latest version of pod-info-app (image from registry)
+        ports:
+        - containerPort: 3000 # direct traffict to port 3000
+        env:
+          - name: POD_NAME
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.name
+          - name: POD_NAMESPACE
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.namespace
+          - name: POD_IP
+            valueFrom:
+              fieldRef:
+                fieldPath: status.podIP
